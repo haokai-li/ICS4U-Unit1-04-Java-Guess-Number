@@ -50,7 +50,7 @@ final class Guess {
     * @param args No args will be used
     */
 
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // set
         final Random rand = new Random();
         final int right = rand.nextInt(SIX) + ONE;
@@ -63,7 +63,9 @@ final class Guess {
                 System.out.print("Guess a number between 1 to 6: ");
                 guess = guessSting.nextInt();
                 if (guess < ZERO || guess > SIX) {
-                    System.out.println("This isn't between 1 to 6. This won't count.");
+                    System.out.println(
+                        "This isn't between 1 to 6. This won't count."
+                    );
                     System.out.println("");
                 } else if (guess < right) {
                     System.out.println("Your guess too low!");
